@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-xl navbar-light">
+    <a class="navbar-brand" href="index.html";>Latitude</a>
+    <button class="navbar-toggler border border-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="max_temperature.html">Max Temperature</a>
+            <a class="dropdown-item" href="humidity.html">Humidity</a>
+            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+            <a class="dropdown-item" href="wind_speed.html">Wind Speed</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="comparisons.html">Comparison<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="data.html">Data</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="bg">
+​   <div class="container">
+  ​   <div class="row">
+        <div class="col-lg-7 col-md-12">
+            <div class="box border-light">
+                <h3 class="">Humidity</h3>
+                <hr class="my-2">
+                  <img src="Resources/assets/images/Fig2.png" class="key-img img-fluid" alt="Humidity vs Latitude">
+                  <p>Humidity does not show a strong correlation to latitude. The visualization shows a great variety of
+                    humidity percentages at different latitudes. Therefore, we cannot conclude that there is a conclusive
+                    pattern between humidity and latitude.
+                  </p>
+                </div>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <div class="box border-light">
+              <h5 class="">Visualizations</h5>
+              <hr class="my-2">
+              <div class="row">
+                  <div class="col-6">
+                    <a href="max_temperature.html">
+                    <img src="Resources/assets/images/Fig1.png" class="viz-img img-fluid rounded" alt="Latitude vs Temperature"></a>
+                  </div>
+                  <div class="col-6">
+                    <a href="humidity.html">
+                    <img src="Resources/assets/images/Fig2.png" class="viz-img img-fluid rounded" alt="Latitude vs Humidity"></a>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-6">
+                    <a href="cloudiness.html">
+                    <img src="Resources/assets/images/Fig3.png" class="viz-img img-fluid rounded" alt="Latitude vs Cloudiness"></a>
+                  </div>
+                  <div class="col-6">
+                    <a href="wind_speed.html">
+                    <img src="Resources/assets/images/Fig4.png" class="viz-img img-fluid rounded" alt="Latitude vs WindSpeed"></a>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer footer-custom fixed-bottom">
+    <div style="background-color: #616161;">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-sm text-white py-3">© Copyright Harini Rao 2020</div>
+    <!-- Copyright -->
+    </div>
+</footer>
+<!-- Footer -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+​

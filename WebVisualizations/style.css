@@ -1,0 +1,100 @@
+.navbar-brand {
+  font-weight: bold;  
+  padding: inherit;
+  margin-left: 130px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: x-large;
+  background-color: #0BADA6;
+}
+.nav-item {
+  font-weight: 500;
+  font-size: 15;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bg {
+  background-image: url('http://mysteryimages.spacestationexplorers.org/sites/default/files/mysteryImages/iss038e045707%201200pixwid%20Cuba.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1000px;
+}
+.box {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  padding: 10px 30px 10px;
+  background-color: white;
+}
+.grid-box {
+  height: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  background-color: white;
+}
+.index-img {
+  height: 200px;
+  padding: 10px;
+}
+.viz-img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin:auto;
+}
+.key-img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin auto;
+}
+.active, .viz-img:hover {
+  border-color:#0BADA6;
+  border-style: solid;
+}
+.scrollbar-custom {
+  position: relative;
+  height: 600px;
+  overflow: auto;
+  }
+  .table-wrapper-scroll {
+  display: block;
+  }
+  .footer-custom {
+    border-top: 8px solid #0BADA6;
+  }
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15;
+}
+h3 {
+  color: #0BADA6;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+h4 {
+  color: #0BADA6;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+h5 {
+  color: #0BADA6;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h6 {
+  color: #0BADA6;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Media Queries */
+ @media(max-width: 992px) {
+  .navbar {
+    background-color: #0BADA6 !important;
+    }
+  .navbar-brand {
+    padding: inherit;
+    margin-left: 20px !important; 
+    font-size: xx-large;
+  }
+}
