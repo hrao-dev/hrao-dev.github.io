@@ -134,7 +134,7 @@
     
     select {
         align-self: center;
-        background-color: #405d27; // color of the selected option
+        background-color: #405d27;
         color: #32CD32 !important;
         font-size: smaller;
         border: 2px solid #32CD32 !important;
