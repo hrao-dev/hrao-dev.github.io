@@ -5,75 +5,75 @@ var tableData = data;
 
 window.addEventListener("load", function() {
 
-            // Display all the UFO Sightings in a table format
-            displayTable(tableData);
+    // Display all the UFO Sightings in a table format
+    displayTable(tableData);
 
-            function displayTable(tdata) {
-                var tbody = d3.select("tbody");
-                if (!tdata.length) {
-                    var trow = tbody.append("tr");
-                    trow.text("No sightings found");
-                } else {
-                    tdata.forEach(function(ufoReport) {
-                        //console.log(ufoReport);
-                        var trow = tbody.append("tr");
-                        trow.append("td").text(ufoReport.datetime)
-                        trow.append("td").text(ufoReport.city)
-                        trow.append("td").text(ufoReport.state)
-                        trow.append("td").text(ufoReport.country)
-                        trow.append("td").text(ufoReport.shape)
-                        trow.append("td").text(ufoReport.durationMinutes)
-                        trow.append("td").text(ufoReport.comments)
-                    })
-                }
-            }
+    function displayTable(tdata) {
+        var tbody = d3.select("tbody");
+        if (!tdata.length) {
+            var trow = tbody.append("tr");
+            trow.text("No sightings found");
+        } else {
+            tdata.forEach(function(ufoReport) {
+                //console.log(ufoReport);
+                var trow = tbody.append("tr");
+                trow.append("td").text(ufoReport.datetime)
+                trow.append("td").text(ufoReport.city)
+                trow.append("td").text(ufoReport.state)
+                trow.append("td").text(ufoReport.country)
+                trow.append("td").text(ufoReport.shape)
+                trow.append("td").text(ufoReport.durationMinutes)
+                trow.append("td").text(ufoReport.comments)
+            })
+        }
+    }
 
-            var states = [];
-            states = tableData.map(u => u.state);
-            var uniqueStates = Array.from(new Set(states))
-                //uniqueStates = uniqueStates.map(function(x) { return x.toUpperCase() })
-            uniqueStates = uniqueStates.sort();
-            //console.log(uniqueStates);
+    var states = [];
+    states = tableData.map(u => u.state);
+    var uniqueStates = Array.from(new Set(states))
+        //uniqueStates = uniqueStates.map(function(x) { return x.toUpperCase() })
+    uniqueStates = uniqueStates.sort();
+    //console.log(uniqueStates);
 
-            var slct = d3.select("#stateselector");
-            for (var s = 0; s < uniqueStates.length; s++) {
-                var seloption = slct.append("option");
-                seloption.text(uniqueStates[s])
-            }
+    var slct = d3.select("#stateselector");
+    for (var s = 0; s < uniqueStates.length; s++) {
+        var seloption = slct.append("option");
+        seloption.text(uniqueStates[s])
+    }
 
-            var countries = [];
-            countries = tableData.map(u => u.country);
-            var uniqueCountries = Array.from(new Set(countries))
-                //uniqueCountries = uniqueCountries.map(function(x) { return x.toUpperCase() })
-            uniqueCountries = uniqueCountries.sort();
-            //console.log(uniqueCountries);
+    var countries = [];
+    countries = tableData.map(u => u.country);
+    var uniqueCountries = Array.from(new Set(countries))
+        //uniqueCountries = uniqueCountries.map(function(x) { return x.toUpperCase() })
+    uniqueCountries = uniqueCountries.sort();
+    //console.log(uniqueCountries);
 
-            var slt = d3.select("#countryselector");
-            for (var c = 0; c < uniqueCountries.length; c++) {
-                var seloptn = slt.append("option");
-                seloptn.text(uniqueCountries[c])
-            }
+    var slt = d3.select("#countryselector");
+    for (var c = 0; c < uniqueCountries.length; c++) {
+        var seloptn = slt.append("option");
+        seloptn.text(uniqueCountries[c])
+    }
 
-            // Select the button
-            var fltrbutton = d3.select(".filter-btn");
-            var clrbutton = d3.select(".clear-btn");
-            const srchDate = document.querySelector("#datetime");
-            const srchCity = document.querySelector("#city");
-            const srchState = document.querySelector("#stateselector");
-            const srchCountry = document.querySelector("#countryselector");
-            const srchShape = document.querySelector("#shape");
+    // Select the button
+    var fltrbutton = d3.select(".filter-btn");
+    var clrbutton = d3.select(".clear-btn");
+    const srchDate = document.querySelector("#datetime");
+    const srchCity = document.querySelector("#city");
+    const srchState = document.querySelector("#stateselector");
+    const srchCountry = document.querySelector("#countryselector");
+    const srchShape = document.querySelector("#shape");
 
 
-            // Create event handlers 
-            fltrbutton.on("click", filterTable);
-            //srchDate.addEventListener("change", filterTable);
-            //srchCity.addEventListener("change", filterTable);
-            //srchState.addEventListener("change", changeCountry);
-            //srchCountry.addEventListener("change", changeState);
-            //srchShape.addEventListener("change", filterTable);
-            clrbutton.on("click", clearFilter);
+    // Create event handlers 
+    fltrbutton.on("click", filterTable);
+    //srchDate.addEventListener("change", filterTable);
+    //srchCity.addEventListener("change", filterTable);
+    srchState.addEventListener("change", changeCountry);
+    //srchCountry.addEventListener("change", changeState);
+    //srchShape.addEventListener("change", filterTable);
+    clrbutton.on("click", clearFilter);
 
-            /*function changeCountry() {
+    function changeCountry() {
         var stateInput = d3.select("#stateselector").property("value");
         console.log(stateInput);
         var cnSelect = document.getElementById("countryselector");
